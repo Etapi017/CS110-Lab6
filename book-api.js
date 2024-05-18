@@ -2,7 +2,7 @@
 const express = require('express')
 const bodyParser = require('body-parser');
 const cors = require('cors');
-//const path = require('path'); // Import the path module
+const path = require('path'); // Import the path module
 
 const app = express();
 const port = 3000;
@@ -15,6 +15,19 @@ app.use(cors());
 //Configuring body parser middleware
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(bodyParser.json());
+
+// Serve static files from the "public" directory
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Define a route for the root URL
+app.get('/', (req, res) => {
+    res.send('Welcome to the Book API!');
+});
+
+// Serve the book-list.html file when navigating to /book-list
+app.get('/book-list', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'book-list.html'));
+});
 
 app.post('/book', (req, res) => {
     const book = req.body;

@@ -1,0 +1,133 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\EndUser\\CS110_Labs\\CS110-Lab6\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\EndUser\\CS110_Labs\\CS110-Lab6\\book-api.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:book-api.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\EndUser\\CS110_Labs\\CS110-Lab6\\public\\book-list.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:public\\book-list.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\EndUser\\CS110_Labs\\CS110-Lab6\\public\\book-list.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:public\\book-list.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\EndUser\\CS110_Labs\\CS110-Lab6\\book.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:book.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\EndUser\\CS110_Labs\\CS110-Lab6\\new-book.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:new-book.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\EndUser\\CS110_Labs\\CS110-Lab6\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\EndUser\\CS110_Labs\\CS110-Lab6\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 167,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 286,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "package.json",
+              "DocumentMoniker": "C:\\Users\\EndUser\\CS110_Labs\\CS110-Lab6\\package.json",
+              "RelativeDocumentMoniker": "package.json",
+              "ToolTip": "C:\\Users\\EndUser\\CS110_Labs\\CS110-Lab6\\package.json",
+              "RelativeToolTip": "package.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-18T18:01:19.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "package-lock.json",
+              "DocumentMoniker": "C:\\Users\\EndUser\\CS110_Labs\\CS110-Lab6\\package-lock.json",
+              "RelativeDocumentMoniker": "package-lock.json",
+              "ToolTip": "C:\\Users\\EndUser\\CS110_Labs\\CS110-Lab6\\package-lock.json",
+              "RelativeToolTip": "package-lock.json",
+              "ViewState": "AQIAALcCAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-18T18:01:15.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "new-book.html",
+              "DocumentMoniker": "C:\\Users\\EndUser\\CS110_Labs\\CS110-Lab6\\new-book.html",
+              "RelativeDocumentMoniker": "new-book.html",
+              "ToolTip": "C:\\Users\\EndUser\\CS110_Labs\\CS110-Lab6\\new-book.html",
+              "RelativeToolTip": "new-book.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-05-18T18:01:12.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "book.json",
+              "DocumentMoniker": "C:\\Users\\EndUser\\CS110_Labs\\CS110-Lab6\\book.json",
+              "RelativeDocumentMoniker": "book.json",
+              "ToolTip": "C:\\Users\\EndUser\\CS110_Labs\\CS110-Lab6\\book.json",
+              "RelativeToolTip": "book.json",
+              "ViewState": "AQIAADsAAAAAAAAAAAAowFsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-18T18:01:09.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "book-list.js",
+              "DocumentMoniker": "C:\\Users\\EndUser\\CS110_Labs\\CS110-Lab6\\public\\book-list.js",
+              "RelativeDocumentMoniker": "public\\book-list.js",
+              "ToolTip": "C:\\Users\\EndUser\\CS110_Labs\\CS110-Lab6\\public\\book-list.js",
+              "RelativeToolTip": "public\\book-list.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-05-18T18:01:01.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "book-list.html",
+              "DocumentMoniker": "C:\\Users\\EndUser\\CS110_Labs\\CS110-Lab6\\public\\book-list.html",
+              "RelativeDocumentMoniker": "public\\book-list.html",
+              "ToolTip": "C:\\Users\\EndUser\\CS110_Labs\\CS110-Lab6\\public\\book-list.html",
+              "RelativeToolTip": "public\\book-list.html",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAADwAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-05-18T18:00:54.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "book-api.js",
+              "DocumentMoniker": "C:\\Users\\EndUser\\CS110_Labs\\CS110-Lab6\\book-api.js",
+              "RelativeDocumentMoniker": "book-api.js",
+              "ToolTip": "C:\\Users\\EndUser\\CS110_Labs\\CS110-Lab6\\book-api.js",
+              "RelativeToolTip": "book-api.js",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAEgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-05-18T18:00:52.931Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
