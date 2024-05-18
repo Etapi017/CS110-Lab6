@@ -29,6 +29,11 @@ app.get('/book-list', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'book-list.html'));
 });
 
+// Serve the new-book.html file when navigating to /new-book
+app.get('/new-book', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'new-book.html'));
+});
+
 app.post('/book', (req, res) => {
     const book = req.body;
 
@@ -66,7 +71,3 @@ app.get('/books', (req, res) => {//(4) Getting all Books (GET / books)
 
 app.listen(port, () => console.log('Hello world app listening on port'));
 
-// // Serve the new-book.html file
-// app.get('/new-book', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'new-book.html')); // Use path.join to get the correct file path
-// });
