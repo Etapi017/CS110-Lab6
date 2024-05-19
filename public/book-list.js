@@ -74,3 +74,19 @@ async function setEditModal (isbn) {
         document.getElementById('editForm').action = `http:localhost:3000/book/${isbn}`;
     }
 }
+
+
+async function deleteBook(isbn) {
+    let response = await fetch(`http://localhost:3000/book/${isbn}`, {
+        method: 'DELETE',
+    });
+
+    if (response.status === 200) {
+        alert('Book deleted successfully');
+        location.reload(); // Reload the page to see the changes
+    } else {
+        console.error('Failed to delete book', response.statusText);
+    }
+}
+
+loadBooks();

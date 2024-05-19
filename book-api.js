@@ -68,6 +68,29 @@ app.get('/books', (req, res) => {//(4) Getting all Books (GET / books)
     res.json(books); 
 });
 
+// Get a single book by ISBN (GET /book/:isbn)
+app.get('/book/:isbn', (req, res) => {
+    const isbn = req.params.isbn;
+    const book = books.find(b => b.isbn === isbn);
+    if (book) {
+        res.json(book);
+    } else {
+        res.status(404).send('Book not found');
+    }
+});
+
+// Delete a book by ISBN (DELETE /book/:isbn)
+app.delete('/book/:isbn', (req, res) => {
+    const isbn = req.params.isbn;
+    const bookIndex = books.findIndex(b => b.isbn === isbn);
+    if (bookIndex !== -1) {
+        books.splice(bookIndex, 1);
+        res.send('Book deleted successfully');
+    } else {
+        res.status(404).send('Book not found');
+    }
+});
+
 
 app.listen(port, () => console.log('Hello world app listening on port'));
 
