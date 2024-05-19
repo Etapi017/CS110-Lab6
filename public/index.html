@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Book Management</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#bookListSection">Book List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#newBookSection">Add New Book</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Book List Section -->
+    <div id="bookListSection" class="container mt-4">
+        <hr>
+        <h1>List of books</h1>
+        <hr>
+        <div>
+            <div class="row" id="books"></div>
+        </div>
+    </div>
+
+    <!-- Add New Book Section -->
+    <div id="newBookSection" class="container mt-4">
+        <hr>
+        <h1>Create New Book</h1>
+        <hr>
+        <form id="newBookForm" action="http://localhost:3000/book" method="POST">
+            <div class="form-group">
+                <label for="ISBN">ISBN</label>
+                <input class="form-control" name="isbn" id="newBookIsbn">
+            </div>
+            <div class="form-group">
+                <label for="Title">Title</label>
+                <input class="form-control" name="title" id="newBookTitle">
+            </div>
+            <div class="form-group">
+                <label for="Author">Author</label>
+                <input class="form-control" name="author" id="newBookAuthor">
+            </div>
+            <div class="form-group">
+                <label for="Published Date">Published Date</label>
+                <input type="date" class="form-control" name="publish_date" id="newBookPublishDate">
+            </div>
+            <div class="form-group">
+                <label for="Publisher">Publisher</label>
+                <input class="form-control" name="publisher" id="newBookPublisher">
+            </div>
+            <div class="form-group">
+                <label for="Number Of Pages">Number Of Pages</label>
+                <input type="number" class="form-control" name="numOfPages" id="newBookNumOfPages">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- Edit Book Modal -->
+    <div id="editBookModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Book</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editForm" method="POST">
+                        <div class="form-group">
+                            <label for="isbn">ISBN</label>
+                            <input class="form-control" name="isbn" id="isbn" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input class="form-control" name="title" id="title">
+                        </div>
+                        <div class="form-group">
+                            <label for="author">Author</label>
+                            <input class="form-control" name="author" id="author">
+                        </div>
+                        <div class="form-group">
+                            <label for="publish_date">Published Date</label>
+                            <input type="date" class="form-control" name="publish_date" id="publish_date">
+                        </div>
+                        <div class="form-group">
+                            <label for="publisher">Publisher</label>
+                            <input class="form-control" name="publisher" id="publisher">
+                        </div>
+                        <div class="form-group">
+                            <label for="numOfPages">Number Of Pages</label>
+                            <input type="number" class="form-control" name="numOfPages" id="numOfPages">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="book-list.js"></script>
+</body>
+</html>

@@ -26,7 +26,10 @@ async function loadBooks (){//(4) Getting all Books (GET / books)
                             <hr>
 
                             <button type="button" class="btn btn-danger">Delete</button>
-                            <button type="button" class="btn btn-primary" data-toggle="modal">Edit</button>
+                            <button types="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#editBookModal" onClick="setEditModal(${book.isbn})">
+                                Edit
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -37,15 +40,10 @@ async function loadBooks (){//(4) Getting all Books (GET / books)
     }
 }
 
-loadBooks();//This one
-
-
 //(5) Editing a book
 async function setEditModal (isbn) {
 
-    let response = await fetch(`http://localhost:3000/book/${isbn}`, {
-        method: 'Edit',
-    });
+    let response = await fetch(`http://localhost:3000/book/${isbn}`);
 
     console.log(response.status); //200
     console.log(response.statusText); //ok
@@ -67,7 +65,7 @@ async function setEditModal (isbn) {
         document.getElementById('author').value = author;
         document.getElementById('publisher').value = publisher;
         document.getElementById('publish_date').value = publisher_date;
-        document.getElementById('numOfPages').value = numOfPages;
+        document.getElementById(`numOfPages`).value = numOfPages;
 
         //setting up the action url for the book
         document.getElementById('editForm').action = `http:localhost:3000/book/${isbn}`;
@@ -88,3 +86,4 @@ async function deleteBook(isbn) {
     }
 }
 
+loadBooks();//This one
