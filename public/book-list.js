@@ -26,10 +26,7 @@ async function loadBooks (){//(4) Getting all Books (GET / books)
                             <hr>
 
                             <button type="button" class="btn btn-danger">Delete</button>
-                            <button types="button" class="btn btn-primary" data-toggle="modal">
-                                data-target="#editBookModal" onClick="setEditModal(${book.isbn})">
-                                Edit
-                            </button>
+                            <button type="button" class="btn btn-primary" data-toggle="modal">Edit</button>
                         </div>
                     </div>
                 </div>
@@ -40,13 +37,15 @@ async function loadBooks (){//(4) Getting all Books (GET / books)
     }
 }
 
-loadBooks();
+loadBooks();//This one
 
 
 //(5) Editing a book
 async function setEditModal (isbn) {
 
-    let response = await fetch(`http://localhost:3000/book/${isbn}`);
+    let response = await fetch(`http://localhost:3000/book/${isbn}`, {
+        method: 'Edit',
+    });
 
     console.log(response.status); //200
     console.log(response.statusText); //ok
@@ -89,4 +88,3 @@ async function deleteBook(isbn) {
     }
 }
 
-loadBooks();
