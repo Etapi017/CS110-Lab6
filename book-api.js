@@ -2,7 +2,7 @@
 const express = require('express')
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const path = require('path'); // Import the path module
+const path = require('path'); // Imports the path module
 
 const app = express();
 const port = 3000;
@@ -16,20 +16,20 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(bodyParser.json());
 
-// Serve static files from the "public" directory
+// Serves static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Define a route for the root URL
+// Route for the root URL
 app.get('/', (req, res) => {
     res.send('Welcome to the Book API!');
 });
 
-// Serve the book-list.html file when navigating to /book-list
+// Serves the book-list.html file when going to /book-list
 app.get('/book-list', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'book-list.html'));
 });
 
-// Serve the new-book.html file when navigating to /new-book
+// Serves the new-book.html file when going to /new-book
 app.get('/new-book', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'new-book.html'));
 });
@@ -37,7 +37,7 @@ app.get('/new-book', (req, res) => {
 app.post('/book', (req, res) => {
     const book = req.body;
 
-    //Output the book to the console for debugging
+    //Outputs the book to the console for debugging
     //3.b
     console.log(book);
     books.push(book);
@@ -46,37 +46,39 @@ app.post('/book', (req, res) => {
 });
 
 //(5.b)
-app.post(`/book/:isbn`, (req, res) => {
+app.post('/book/:isbn', (req, res) => {
     //reading isbn from the URL
     const isbn = req.params.isbn;
     const newBook = req.body;
 
-    // Update the book in the books array
+    // Updates the book in the books array
     let bookFound = false;//new
-    //Remove item from the books array
+    //Removes item from the books array
     for(let i = 0; i < books.length; i++) {
         let book = books[i]
 
         if(book.isbn === isbn) {
             books[i] = newBook;
-            bookFound = true;//new
-            break;//new
+            return res.send('Book is edited');
+            //bookFound = true;//new
+            //break;//new
         }
     }
 
-    if (bookFound){//new
+    /* if (bookFound){//new
     //sending 404 when not found something is a good practice
     res.send('Book is edited');
     }else{//new
         res.status(404).send('Book not found');//new
-    }
+    } */
+    res.status(404).send('Book not found');//new
 });
 
 app.get('/books', (req, res) => {//(4) Getting all Books (GET / books)
     res.json(books); 
 });
 
-// Get a single book by ISBN (GET /book/:isbn)
+// Gets a single book by ISBN (GET /book/:isbn)
 app.get('/book/:isbn', (req, res) => {
     const isbn = req.params.isbn;
     const book = books.find(b => b.isbn === isbn);
@@ -87,7 +89,7 @@ app.get('/book/:isbn', (req, res) => {
     }
 });
 
-// Delete a book by ISBN (DELETE /book/:isbn)
+// Deletes a book by ISBN (DELETE /book/:isbn)
 app.delete('/book/:isbn', (req, res) => {
     const isbn = req.params.isbn;
     const bookIndex = books.findIndex(b => b.isbn === isbn);
