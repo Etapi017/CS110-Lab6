@@ -46,7 +46,7 @@ app.post('/book', (req, res) => {
 });
 
 //(5.b)
-app.post(`/book/:isbn`, (req, res) => {
+app.post('/book/:isbn', (req, res) => {
     //reading isbn from the URL
     const isbn = req.params.isbn;
     const newBook = req.body;
@@ -59,17 +59,19 @@ app.post(`/book/:isbn`, (req, res) => {
 
         if(book.isbn === isbn) {
             books[i] = newBook;
-            bookFound = true;//new
-            break;//new
+            return res.send('Book is edited');
+            //bookFound = true;//new
+            //break;//new
         }
     }
 
-    if (bookFound){//new
+    /* if (bookFound){//new
     //sending 404 when not found something is a good practice
     res.send('Book is edited');
     }else{//new
         res.status(404).send('Book not found');//new
-    }
+    } */
+    res.status(404).send('Book not found');//new
 });
 
 app.get('/books', (req, res) => {//(4) Getting all Books (GET / books)
