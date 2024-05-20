@@ -9,7 +9,7 @@ async function loadBooks() {
         console.log(data);
         const books = JSON.parse(data);
 
-        document.getElementById('books').innerHTML = ''; // Clear the book list before adding updated list
+        document.getElementById('books').innerHTML = ''; // Clears the book list before adding updated list
 
         for (let book of books) {
             const x = `
@@ -59,7 +59,7 @@ async function setEditModal(isbn) {
         document.getElementById('publish_date').value = publish_date;
         document.getElementById('numOfPages').value = numOfPages;
 
-        // Setting up the action URL for the book
+        // Action URL for the book
         document.getElementById('editForm').action = `http://localhost:3000/book/${isbn}`;
     }
 }
@@ -71,7 +71,7 @@ async function deleteBook(isbn) {
 
     if (response.status === 200) {
         alert('Book deleted successfully');
-        loadBooks(); // Reload the books after deleting
+        loadBooks(); // Reloads the books after deleting
     } else {
         console.error('Failed to delete book', response.statusText);
     }
@@ -98,8 +98,8 @@ document.getElementById('editForm').addEventListener('submit', async (event) => 
 
     if (response.status === 200) {
         alert('Book updated successfully');
-        loadBooks(); // Reload the books after updating
-        $('#editBookModal').modal('hide'); // Hide the modal after successful update
+        loadBooks(); // Reloads the books after updating
+        $('#editBookModal').modal('hide'); // Hides the editBookModal after update
     } else {
         console.error('Failed to update book', response.statusText);
     }
@@ -127,7 +127,7 @@ document.getElementById('newBookForm').addEventListener('submit', async (event) 
     if (response.status === 200) {
         alert('Book added successfully');
         document.getElementById('newBookForm').reset();
-        loadBooks(); // Reload the books after adding
+        loadBooks(); // Reloads the books after adding
     } else {
         console.error('Failed to add book', response.statusText);
     }
